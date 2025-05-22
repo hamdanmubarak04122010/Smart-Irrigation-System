@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Irrigation Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .sdg-banner {
+      background-color: #f0f9ff;
+      padding: 20px;
+      border-bottom: 2px solid #00796b;
+    }
+
+    .sdg-banner h2 {
+      margin-bottom: 20px;
+      color: #00796b;
+    }
+
+    .sdg-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .sdg-item {
+      display: flex;
+      align-items: center;
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .sdg-item img {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+      flex-shrink: 0;
+    }
+
+    .sensor-panel {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sdg-banner">
+    <h2>🌱 Supporting the Sustainable Development Goals</h2>
+    <div class="sdg-items">
+      <div class="sdg-item">
+        <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-02.jpg" alt="SDG 2 - Zero Hunger" />
+        <p><strong>SDG 2 – Zero Hunger:</strong> "End hunger, achieve food security and improved nutrition, and promote sustainable agriculture."</p>
+      </div>
+
+      <div class="sdg-item">
+        <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-06.jpg" alt="SDG 6 - Clean Water and Sanitation" />
+        <p><strong>SDG 6 – Clean Water and Sanitation:</strong> "Ensure availability and sustainable management of water and sanitation for all."</p>
+      </div>
+
+      <div class="sdg-item">
+        <img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-13.jpg" alt="SDG 13 - Climate Action" />
+        <p><strong>SDG 13 – Climate Action:</strong> "Take urgent action to combat climate change and its impacts."</p>
+      </div>
+    </div>
+  </div>
+
+  <h1>Smart Irrigation Dashboard</h1>
+
+  <div class="sensor-panel">
+    <p>Soil Moisture: <span id="moisture">--</span>%</p>
+    <p>Temperature: <span id="temperature">--</span>°C</p>
+    <p>Humidity: <span id="humidity">--</span>%</p>
+    <p>Status: <span id="status">OFF</span></p>
+    <button onclick="toggleIrrigation()">Toggle Irrigation</button>
+  </div>
+
+  <canvas id="chart" width="400" height="200"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
